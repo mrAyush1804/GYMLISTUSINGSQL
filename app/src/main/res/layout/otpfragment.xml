@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".otpfragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="20dp">
+
+
+        <TextView
+            android:id="@+id/verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/poppinsextrabold"
+            android:gravity="center_horizontal"
+            android:text="VERIFY YOUR ACCOUNT WITH   OTP"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/relatrivesecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify"
+            android:layout_marginVertical="20dp"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+
+            <EditText
+                android:id="@+id/editotp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/edittextdegin"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="25dp" />
+
+
+            <EditText
+                android:id="@+id/editotp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@id/editotp1"
+                android:background="@drawable/edittextdegin"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="25dp" />
+
+            <EditText
+                android:id="@+id/editotp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@id/editotp2"
+                android:background="@drawable/edittextdegin"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="25dp" />
+
+            <EditText
+                android:id="@+id/editotp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toRightOf="@id/editotp3"
+                android:background="@drawable/edittextdegin"
+                android:maxLength="1"
+                android:maxLines="1"
+                android:padding="25dp" />
+
+
+            <TextView
+                android:id="@+id/wesent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editotp3"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="we sent"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editotp3"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/wesent"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="  74*******"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/verifyotpbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relatrivesecond"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/bagroungsecondbtn"
+            android:fontFamily="@font/poppinsextrabold"
+            android:text="verify"
+            android:textColor="@color/white">
+
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verifyotpbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/dint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Did't Recived the otp click to?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/dint"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Resend"
+                android:textColor="@color/gras"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_centerHorizontal="true">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left_24"
+                app:tint="@color/gras" />
+
+
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsextrabold"
+                android:text="Back to login"
+                android:textColor="@color/gras"
+                android:layout_below="@+id/l1"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

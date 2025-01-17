@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forgetphonenumberscreen"
+    android:background="@color/black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="20dp">
+
+        <ImageView
+            android:id="@+id/lockimage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/lock__1_"
+            android:layout_centerHorizontal="true"
+            app:tint="@color/brownlight" />
+
+        <TextView
+            android:id="@+id/textforgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password"
+            android:textSize="25dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsextrabold"
+            android:layout_below="@id/lockimage"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+
+        <TextView
+            android:id="@+id/textforgotpasworddetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter phonemuber associate with your account and wiil sent you the a otp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@id/textforgot"
+            android:layout_marginHorizontal="30dp"
+            android:fontFamily="@font/poppint_bold"
+            />
+
+
+        <EditText
+            android:id="@+id/editnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextdegin"
+            android:padding="10dp"
+            android:layout_below="@id/textforgotpasworddetail"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:maxLines="1"
+            android:inputType="number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editnumber"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="send"
+            android:fontFamily="@font/poppint_bold"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonbaground"
+            />
+
+
+        <View
+            android:id="@+id/viewforget"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_below="@id/btnsend"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewforget"
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="20dp">
+
+
+            <ImageView
+                android:id="@+id/imageapple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/apple"
+                android:layout_marginHorizontal="20dp"
+                android:padding="2dp"
+                android:background="@drawable/bagroungsecondbtn"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imagegoogle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bagroungsecondbtn"
+                android:padding="7dp"
+                android:src="@drawable/google"/>
+            <ImageView
+                android:id="@+id/imagefacebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:padding="7dp"
+                android:background="@drawable/bagroungsecondbtn"
+                android:src="@drawable/facebook"/>
+
+
+        </LinearLayout>
+
+
+   </RelativeLayout>
+
+</LinearLayout>

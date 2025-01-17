@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".singupscreen"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S I N G U P"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinsextrabold"
+            android:layout_marginVertical="20dp" />
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/poppint_bold"
+            android:layout_below="@+id/name" />
+
+        <EditText
+            android:id="@+id/ExitextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="Enter your name"
+            android:maxLines="1"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/edittextdegin"
+            android:layout_below="@id/textname" />
+
+
+
+        <TextView
+            android:id="@+id/textemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/poppint_bold"
+            android:layout_below="@+id/ExitextEmail" />
+
+        <EditText
+            android:id="@+id/editemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="Email"
+            android:maxLines="1"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/edittextdegin"
+            android:layout_below="@id/textemail" />
+
+
+
+        <TextView
+            android:id="@+id/textphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phone"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/poppint_bold"
+            android:layout_below="@+id/editemail" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="Phone"
+            android:maxLines="1"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/edittextdegin"
+            android:layout_below="@id/textphone" />
+
+
+        <TextView
+            android:id="@+id/textpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/poppint_bold"
+            android:layout_below="@id/phone" />
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="Password"
+            android:maxLines="1"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@drawable/edittextdegin"
+            android:layout_below="@id/textpassword" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sing-up"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonbaground"
+            android:layout_below="@id/Password"
+            android:layout_marginTop="35dp" />
+
+        <LinearLayout
+            android:id="@+id/lenearfirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnlogin"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imageapple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/apple"
+                android:layout_marginHorizontal="20dp"
+                android:padding="2dp"
+                android:background="@drawable/bagroungsecondbtn"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imagegoogle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bagroungsecondbtn"
+                android:padding="7dp"
+                android:src="@drawable/google"/>
+            <ImageView
+                android:id="@+id/imagefacebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:padding="7dp"
+                android:background="@drawable/bagroungsecondbtn"
+                android:src="@drawable/facebook"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/lenearsecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lenearfirst"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+
+
+            <TextView
+                android:id="@+id/textsecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have a account?"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppint_bold"
+                android:layout_below="@id/phone" />
+
+
+            <TextView
+                android:id="@+id/textlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login"
+                android:textColor="@color/brownlight"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppint_bold"
+                android:layout_below="@id/phone" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

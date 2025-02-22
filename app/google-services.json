@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000264767719",
+    "project_id": "gymmaster-caf2d",
+    "storage_bucket": "gymmaster-caf2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000264767719:android:50a3359b225f7b0b67aa42",
+        "android_client_info": {
+          "package_name": "com.example.gymlist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO6_2tn_x4mWOTJ1nlh1ky17Xt011QoD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

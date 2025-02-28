@@ -37,7 +37,7 @@
             android:layout_below="@+id/name" />
 
         <EditText
-            android:id="@+id/ExitextEmail"
+            android:id="@+id/Exitextname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10sp"
@@ -59,7 +59,7 @@
             android:textColor="@color/white"
             android:textSize="19sp"
             android:fontFamily="@font/poppint_bold"
-            android:layout_below="@+id/ExitextEmail" />
+            android:layout_below="@+id/Exitextname" />
 
         <EditText
             android:id="@+id/editemail"
@@ -110,19 +110,19 @@
             android:fontFamily="@font/poppint_bold"
             android:layout_below="@id/phone" />
 
+
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/password0ne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp"
+            android:layout_below="@id/textpassword"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/edittextdegin"
+            android:fontFamily="@font/poppinsmedium"
             android:hint="Password"
             android:maxLines="1"
-            android:textColorHint="@color/black"
-            android:fontFamily="@font/poppinsmedium"
-            android:background="@drawable/edittextdegin"
-            android:layout_below="@id/textpassword" />
-
-
+            android:padding="10sp"
+            android:textColorHint="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnlogin"
@@ -132,7 +132,7 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:background="@drawable/buttonbaground"
-            android:layout_below="@id/Password"
+            android:layout_below="@id/password0ne"
             android:layout_marginTop="35dp" />
 
         <LinearLayout

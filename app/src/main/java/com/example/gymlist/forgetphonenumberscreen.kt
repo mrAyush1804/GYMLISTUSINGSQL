@@ -1,11 +1,11 @@
 package com.example.gymlist
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -32,12 +32,17 @@ class forgetphonenumberscreen : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view=inflater.inflate(R.layout.fragment_forgetphonenumberscreen, container, false)
-        view.findViewById<Button>(R.id.btnsend).setOnClickListener {findNavController().navigate("Changepassswor")}
+        val view = inflater.inflate(R.layout.fragment_forgetphonenumberscreen, container, false)
+        view.findViewById<Button>(R.id.btnsend).setOnClickListener {
+            findNavController().navigate(
+                "Changepassswor"
+            )
+        }
         return view
     }
 

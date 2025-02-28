@@ -1,12 +1,17 @@
 package com.example.gymlist
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.gymlist.firestoreprectice.FirestoreManager
+import com.example.gymlist.firestoreprectice.User
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,10 +23,12 @@ private const val ARG_PARAM2 = "param2"
  * Use the [singupscreen.newInstance] factory method to
  * create an instance of this fragment.
  */
+@Suppress("NAME_SHADOWING")
 class singupscreen : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private val firestoreManager = FirestoreManager.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,15 +38,55 @@ class singupscreen : Fragment() {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
 
-        val view=inflater.inflate(R.layout.fragment_singupscreen, container, false)
-        view.findViewById<Button>(R.id.btnlogin).setOnClickListener { findNavController().navigate("otp") }
+        val view = inflater.inflate(R.layout.fragment_singupscreen, container, false)
+        val name = view.findViewById<EditText>(R.id.Exitextname)
+        val email = view.findViewById<EditText>(R.id.editemail)
+        val phone = view.findViewById<EditText>(R.id.phone)
+        val password = view.findViewById<EditText>(R.id.password0ne)
+
+        view.findViewById<Button>(R.id.btnlogin).setOnClickListener {
+            signupUser(name, email, phone, password)
+        }
+
         return view
+    }
+
+    private fun signupUser(name: EditText, email: EditText, phone: EditText, paswword: EditText) {
+        val name = name.text.toString().trim()
+        val email = email.text.toString().trim()
+        val phone = phone.text.toString().trim()
+        val password = paswword.text.toString().trim()
+
+        // Validation
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Create User object
+        val user = User(name, email, phone, password)
+
+        // Save to Firestore using FirestoreManager
+        firestoreManager.savedata(
+            collection = "users",
+            documentId = email, // Email as unique ID
+            data = user,
+            onSuccess = {
+                Toast.makeText(requireContext(), "Signup Successful!", Toast.LENGTH_SHORT).show()
+                findNavController().navigate("otp") // Navigate to OTP
+            },
+            onFailure = { e ->
+                Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        )
     }
 
     companion object {

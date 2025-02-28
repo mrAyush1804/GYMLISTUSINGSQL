@@ -8,19 +8,15 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-
 class splashcreenfragment : Fragment(R.layout.fragment_splashcreenfragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         viewLifecycleOwner.lifecycleScope.launch {
             delay(3000L)
             navigateToLogin()
         }
-
-
     }
 
     private fun navigateToLogin() {
@@ -33,6 +29,4 @@ class splashcreenfragment : Fragment(R.layout.fragment_splashcreenfragment) {
 
         navController?.navigate("login")
     }
-
-
 }

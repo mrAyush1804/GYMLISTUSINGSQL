@@ -5,6 +5,8 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint")
 }
 
+apply(from = "$rootDir/spotless.gradle")
+
 android {
     namespace = "com.example.gymlist"
     compileSdk = 35

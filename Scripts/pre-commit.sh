@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Function to run ktlint checksi
+# Function to run ktlint checks
 run_ktlint_checks() {
   # shellcheck disable=SC2028
-  echo "\n🚀 Brace yourself! We're about to embark on a journey of code analysis and style checking with ktlint!"
+  echo "\n🚀 Chalo, ktlint se code check karte hain!"
   ./gradlew ktlintCheck --daemon > /tmp/ktlint-result
   KT_EXIT_CODE=$?
 
@@ -12,14 +12,14 @@ run_ktlint_checks() {
       rm /tmp/ktlint-result
       # shellcheck disable=SC2028
       echo "\n*********************************************************************************"
-      echo "     💥 Oh no! ktlint found style issues in the code! Time to fix those gremlins! 💥"
-      echo "     💡 Tip: You might need your Kotlin ninja skills to resolve these issues. 🛠️"
+      echo "     💥 Plese make sure karo ki tumne galti nahi ki ha  💥"
+      echo "     💡 Hint: Error padho aur fix karo. 🛠️"
       # shellcheck disable=SC2028
       echo "*********************************************************************************\n"
       exit ${KT_EXIT_CODE}
   else
       rm /tmp/ktlint-result
-      echo "🎉 Bravo! Your Kotlin code has passed ktlint's rigorous style checks with flying colors! Keep rocking that clean code! 🚀💫"
+      echo "🎉 Wah! Tumhara code ktlint test pass kar gaya! Bahut badhiya! 🚀✨"
   fi
 }
 

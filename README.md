@@ -26,4 +26,4 @@ Explanation:
 startDestination: Pehli screen kaunsa show karni hai, yahaan "splash" set hai.
 fragment: Har fragment ke liye ek route define kiya gaya hai:
 fragment<splashcreenfragment>("splash") ka matlab hai ki jab "splash" route access hoga, toh splashcreenfragment open hoga.
-label ka use navigation ke titles define karne ke liye hota hai.
+label ka use navigation ke titles define karne ke liye hota hai.gg

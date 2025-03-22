@@ -1,0 +1,21 @@
+name : workflow test
+on:
+ push:
+  branches:
+   -main
+
+jobs:
+ log-push-details:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkoutcode 
+     uses: actions/checkout@v4
+     with:
+      fetch-depth: 0  
+   - name: push log details
+     run: |
+          echo "Push karne wala member: ${{ github.actor }}"
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          echo "Push ka SHA: ${{ github.sha }}"
+          echo "Changed files:"
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
